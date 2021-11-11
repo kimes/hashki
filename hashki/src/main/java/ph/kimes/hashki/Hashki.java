@@ -14,15 +14,13 @@ public class Hashki {
         this.alphabet = alphabet;
     }
 
-    private String encode(String text) throws HashkiException {
+    public String encode(String text) throws HashkiException {
         try {
             //String alphabet = "0123456789";
             //String text = "B2A2021-11-10T13:57Nagaalps848.000534";
             //int hashLength = 8;
 
             int[] splitTo = split(text.length(), length);
-
-            if (splitTo.length <= 0) throw new HashkiException("");
 
             String hashText = "";
             int textCountHashed = 0;
